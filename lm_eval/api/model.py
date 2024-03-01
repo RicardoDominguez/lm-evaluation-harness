@@ -305,8 +305,8 @@ class TemplateLM(LM):
         continuation_enc = whole_enc[context_enc_len:]
 
         return context_enc, continuation_enc
-
-    def loglikelihood(self, requests) -> List[Tuple[float, bool]]:
+    
+    def get_new_reqs(self, requests):
         new_reqs = []
         for context, continuation in [req.args for req in requests]:
             if context == "":
@@ -319,7 +319,11 @@ class TemplateLM(LM):
                 context_enc, continuation_enc = self._encode_pair(context, continuation)
 
             new_reqs.append(((context, continuation), context_enc, continuation_enc))
+        
+        return new_reqs
 
+    def loglikelihood(self, requests) -> List[Tuple[float, bool]]:
+        new_reqs = self.get_new_reqs(requests)
         return self._loglikelihood_tokens(new_reqs)
 
     @abc.abstractmethod

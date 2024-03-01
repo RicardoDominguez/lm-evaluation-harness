@@ -361,6 +361,7 @@ class Task(abc.ABC):
         world_size=None,
         cache_requests=False,
         rewrite_requests_cache=False,
+        split=None,
     ) -> None:
         """Build a set of Instances for a task, and store them in task.instances"""
 
@@ -395,8 +396,9 @@ class Task(abc.ABC):
         ):
             limit = None
 
+        # this should change based on the split
         doc_id_docs = list(
-            self.doc_iterator(rank=rank, limit=limit, world_size=world_size)
+            self.doc_iterator(rank=rank, limit=limit, world_size=world_size, split=split)
         )
 
         num_docs = len(doc_id_docs)
@@ -631,11 +633,26 @@ class Task(abc.ABC):
             assert False, f"Task dataset (path={self.DATASET_PATH}, name={self.DATASET_NAME}) must have valid or test docs!"
 
     def doc_iterator(
-        self, *, rank: int = 0, limit: Union[int, None] = None, world_size: int = 1
+        self, *, rank: int = 0, limit: Union[int, None] = None, world_size: int = 1, split: str = None,
     ) -> Iterator[Tuple[int, Any]]:
         limit = int(limit) if limit else None
+
+        if split == "train":
+            assert self.has_training_docs(), "Task has no training docs"
+            docs = self.training_docs()
+        elif split == "val":
+            assert self.has_validation_docs(), "Task has no validation docs"
+            docs = self.validation_docs()
+        elif split == "test":
+            assert self.has_test_docs(), "Task has no test docs"
+            docs = self.test_docs()
+        elif split is None:
+            docs = self.eval_docs
+        else:
+            raise ValueError(f"Invalid split: {split}")
+
         doc_iterator = utils.create_iterator(
-            enumerate(self.eval_docs),
+            enumerate(docs),
             rank=int(rank),
             limit=limit,
             world_size=int(world_size),
