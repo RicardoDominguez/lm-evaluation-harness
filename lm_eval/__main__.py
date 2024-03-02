@@ -56,14 +56,14 @@ def parse_eval_args() -> argparse.Namespace:
     parser.add_argument(
         "--tasks",
         "-t",
-        default="arc_easy",
+        default=None,
         metavar="task1,task2",
         help="To get full list of tasks, use the command lm-eval --tasks list",
     )
     parser.add_argument(
         "--model_args",
         "-a",
-        default="pretrained=gpt2",
+        default="",
         help="Comma separated string arguments for model, e.g. `pretrained=EleutherAI/pythia-160m,dtype=float32`",
     )
     parser.add_argument(
@@ -92,7 +92,7 @@ def parse_eval_args() -> argparse.Namespace:
     parser.add_argument(
         "--device",
         type=str,
-        default='cpu',
+        default=None,
         help="Device to use (e.g. cuda, cuda:0, cpu).",
     )
     parser.add_argument(
@@ -107,7 +107,7 @@ def parse_eval_args() -> argparse.Namespace:
         "--limit",
         "-L",
         type=float,
-        default=20,
+        default=None,
         metavar="N|0<N<1",
         help="Limit the number of examples per task. "
         "If <1, limit is a percentage of the total number of examples.",
