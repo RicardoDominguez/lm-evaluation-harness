@@ -17,6 +17,12 @@ generation_kwargs:
   do_sample: false
   temperature: 0.0
 num_fewshot: 0
+filter_list:
+  - name: "get-answer"
+    filter:
+      - function: "regex"
+        regex_pattern: "\\s*(.*?)\\s*$"
+      - function: "take_first"
 metadata:
   version: 1.0
   num_fewshot: 3 # will be printed in results table

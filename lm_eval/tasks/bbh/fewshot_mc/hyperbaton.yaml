@@ -1,0 +1,5 @@
+"dataset_name": "hyperbaton"
+"description": "Order adjectives correctly in English sentences.\n\n"
+"doc_to_text": "Which sentence has the correct adjective order:\nA. rubber terrible ship\nB. terrible rubber ship\nAnswer: B\n\nWhich sentence has the correct adjective order:\nA. repulsive small Brazilian exercise ship\nB. Brazilian repulsive exercise small ship\nAnswer: A\n\nWhich sentence has the correct adjective order:\nA. blue gold wonderful square shoe\nB. wonderful square blue gold shoe\nAnswer: B\n\n{{question}}\nAnswer:"
+"include": "_fewshot_template_yaml"
+"task": "bbh_fewshot_hyperbaton_mc"

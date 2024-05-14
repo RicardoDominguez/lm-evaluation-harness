@@ -1,0 +1,5 @@
+"dataset_name": "movie_recommendation"
+"description": "Recommend movies similar to the given list of movies.\n\n"
+"doc_to_text": "Find a movie similar to Star Wars Episode IV - A New Hope, Indiana Jones and the Last Crusade, Star Wars Episode V - The Empire Strikes Back, The Big Lebowski:\nA. Tetsuo\nB. the Ironman\nC. The Princess Bride\nD. The Barkley Marathons The Race That Eats Its Young\nE. Bug\nAnswer: C\n\nFind a movie similar to Twister, The Silence of the Lambs, Independence Day, Braveheart:\nA. They Shoot Horses\nB. Don't They\nC. Forrest Gump\nD. The Salton Sea\nE. Extreme Days\nAnswer: C\n\nFind a movie similar to Minority Report, Total Recall, Inside Out, Forrest Gump:\nA. Phenomena\nB. Lilting\nC. Catwoman\nD. Edge of Tomorrow\nAnswer: D\n\n{{question}}\nAnswer:"
+"include": "_fewshot_template_yaml"
+"task": "bbh_fewshot_movie_recommendation_mc"

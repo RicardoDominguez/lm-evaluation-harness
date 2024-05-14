@@ -1,0 +1,5 @@
+"dataset_name": "disambiguation_qa"
+"description": "Clarify the meaning of sentences with ambiguous pronouns.\n\n"
+"doc_to_text": "Question: In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The chief told the counselor that they took the day off.\nAnswer: The chief took the day off\n\nQuestion: In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The manager sent a message to the secretary, but he didn't reply yet.\nAnswer: The secretary didn't reply yet\n\nQuestion: In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: Bailey will plan to meet the director at his office\nAnswer: Ambiguous\n\nQuestion: {{question}}\nAnswer:"
+"include": "_fewshot_template_yaml"
+"task": "bbh_fewshot_disambiguation_qa_cloze"

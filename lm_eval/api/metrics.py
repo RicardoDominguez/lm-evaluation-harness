@@ -118,11 +118,30 @@ def ter(items):
 
 @register_aggregation("brier_score")
 def brier_score(items):  # This is a passthrough function
-    gold, predictions = list(zip(*items))
-    gold = list(gold)
-    gold_one_hot = np.eye(np.max(gold) + 1)[gold]
-    predictions = list(zip(*items))[1]
-    return np.mean(np.sum((predictions - gold_one_hot) ** 2, axis=1))
+    brier = lambda gold, pred : sum((pred - np.eye(len(pred))[gold])**2)
+    return np.mean([brier(*x) for x in items])
+
+    # # gold, predictions = list(zip(*items))
+    # # gold = list(gold)
+
+    # # assert len(predictions) == len(gold)
+    # # squared_error = 0
+    # # for p, g in zip(predictions, gold):
+    # #     one_hot_gold = np.eye(len(p))[g]
+    # #     squared_error += sum((p - one_hot_gold) ** 2)
+    # # return squared_error / len(gold)
+
+    # # # one liner
+    # # return np.mean([sum((p - np.eye(len(p))[g])**2) for p, g in zip(predictions, gold)])
+
+    # return np.mean([sum((p - np.eye(len(p))[g])**2) for p, g in zip(*items)])
+
+    # gold_one_hot = np.eye(np.max(gold) + 1)[gold]
+    # predictions = list(zip(*items))[1]
+
+    # assert len(predictions) == len(gold_one_hot)
+    # return np.mean([sum((p-q)**2) for p, q in zip(predictions, gold_one_hot)])
+    # # return np.mean(np.sum((predictions - gold_one_hot) ** 2, axis=1))
 
 
 @register_metric(

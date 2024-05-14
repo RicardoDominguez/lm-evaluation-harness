@@ -1,0 +1,6 @@
+group: mmlu_cloze
+task:
+  - mmlu_stem_cloze
+  - mmlu_other_cloze
+  - mmlu_social_sciences_cloze
+  - mmlu_humanities_cloze

@@ -1,0 +1,5 @@
+"dataset_name": "date_understanding"
+"description": "Infer the date from context.\n\n"
+"doc_to_text": "Today is Christmas Eve of 1937. What is the date 10 days ago in MM/DD/YYYY?\nA. 12/14/2026\nB. 12/14/1950\nC. 12/14/2007\nD. 12/14/1937\nE. 07/14/1938\nF. 12/14/1988\nAnswer: D\n\nTomorrow is 11/12/2019. What is the date one year ago from today in MM/DD/YYYY?\nA. 09/04/2018\nB. 11/11/2018\nC. 08/25/2018\nD. 11/02/2018\nE. 11/04/2018\nAnswer: B\n\nJane and John married on Jan 2, 1958. It is their 5-year anniversary today. What is the date tomorrow in MM/DD/YYYY?\nA. 01/11/1961\nB. 01/03/1963\nC. 01/18/1961\nD. 10/14/1960\nE. 01/03/1982\nF. 12/03/1960\nAnswer: B\n\n{{question}}\nAnswer:"
+"include": "_fewshot_template_yaml"
+"task": "bbh_fewshot_date_understanding_mc"

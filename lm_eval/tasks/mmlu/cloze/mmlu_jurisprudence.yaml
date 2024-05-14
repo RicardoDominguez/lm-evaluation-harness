@@ -1,0 +1,8 @@
+"dataset_name": "jurisprudence"
+"description": "The following are multiple choice questions (with answers) about jurisprudence.\n\
+  \n"
+"group": "mmlu_humanities_cloze"
+"group_alias": "humanities_cloze"
+"include": "_default_template_yaml"
+"task": "mmlu_jurisprudence_cloze"
+"task_alias": "jurisprudence_cloze"

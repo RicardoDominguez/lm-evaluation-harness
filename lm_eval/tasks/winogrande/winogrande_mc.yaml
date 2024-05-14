@@ -1,0 +1,17 @@
+task: winogrande_mc
+dataset_path: ricdomolm/winogrande_mc
+output_type: multiple_choice
+training_split: train
+validation_split: validation
+doc_to_text: "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nAnswer:"
+doc_to_choice: ["A", "B"]
+doc_to_target: answer
+should_decontaminate: true
+doc_to_decontamination_query: question
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: brier_score
+metadata:
+  version: 1.0

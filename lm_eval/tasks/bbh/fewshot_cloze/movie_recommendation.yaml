@@ -1,0 +1,5 @@
+"dataset_name": "movie_recommendation"
+"description": "Recommend movies similar to the given list of movies.\n\n"
+"doc_to_text": "Question: Find a movie similar to Star Wars Episode IV - A New Hope, Indiana Jones and the Last Crusade, Star Wars Episode V - The Empire Strikes Back, The Big Lebowski\nAnswer: The Princess Bride\n\nQuestion: Find a movie similar to Twister, The Silence of the Lambs, Independence Day, Braveheart:\nAnswer: Forrest Gump\n\nQuestion: Find a movie similar to Minority Report, Total Recall, Inside Out, Forrest Gump:\nAnswer: Edge of Tomorrow\n\nQuestion: {{question}}\nAnswer:"
+"include": "_fewshot_template_yaml"
+"task": "bbh_fewshot_movie_recommendation_cloze"

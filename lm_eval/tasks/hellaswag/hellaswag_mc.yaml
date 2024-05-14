@@ -1,10 +1,12 @@
-dataset_path: hails/mmlu_no_train # a copy of `cais/mmlu` with no auxiliary_train split
-test_split: test
-validation_split: validation
-fewshot_split: dev
-fewshot_config:
-  sampler: first_n
+group:
+  - multiple_choice
+task: hellaswag_mc
+dataset_path: ricdomolm/arc_challenge_mc
+dataset_name: null
 output_type: multiple_choice
+training_split: train
+validation_split: validation
+test_split: null
 doc_to_text: "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\nD. {{choices[3]}}\nAnswer:"
 doc_to_choice: ["A", "B", "C", "D"]
 doc_to_target: answer
@@ -14,4 +16,4 @@ metric_list:
     higher_is_better: true
   - metric: brier_score
 metadata:
-  version: 0.0
+  version: 1.0

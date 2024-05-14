@@ -1,0 +1,5 @@
+"dataset_name": "date_understanding"
+"description": "Infer the date from context.\n\n"
+"doc_to_text": "Question: Today is Christmas Eve of 1937. What is the date 10 days ago in MM/DD/YYYY?\nAnswer: 12/14/1937\n\nQuestion: Tomorrow is 11/12/2019. What is the date one year ago from today in MM/DD/YYYY?\nAnswer: 11/11/2018\n\nQuestion: Jane and John married on Jan 2, 1958. It is their 5-year anniversary today. What is the date tomorrow in MM/DD/YYYY?\nAnswer: 01/03/1963\n\nQuestion: {{question}}\nAnswer:"
+"include": "_fewshot_template_yaml"
+"task": "bbh_fewshot_date_understanding_cloze"
