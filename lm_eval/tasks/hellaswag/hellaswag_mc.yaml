@@ -1,7 +1,7 @@
 group:
   - multiple_choice
 task: hellaswag_mc
-dataset_path: ricdomolm/arc_challenge_mc
+dataset_path: ricdomolm/hellaswag_mc
 dataset_name: null
 output_type: multiple_choice
 training_split: train

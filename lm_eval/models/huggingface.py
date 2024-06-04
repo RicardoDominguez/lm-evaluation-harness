@@ -1152,7 +1152,8 @@ class HFLM(TemplateLM):
                     f"Expected `kwargs` to be of type `dict` but got {type(gen_kwargs)}"
                 )
             if not until:
-                until = [self.tok_decode(self.eot_token_id)]
+                until = []
+            until.append(self.tok_decode(self.eot_token_id))
             if "max_gen_toks" in kwargs.keys():
                 max_gen_toks = kwargs.pop("max_gen_toks")
             else:
