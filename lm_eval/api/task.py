@@ -868,6 +868,7 @@ class ConfigurableTask(Task):
                 dataset_kwargs['trust_remote_code'] = True
         else:
             dataset_kwargs = {'trust_remote_code': True}
+        print(dataset_kwargs)
 
         self.dataset = datasets.load_dataset(
             path=self.DATASET_PATH,
