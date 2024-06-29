@@ -863,11 +863,13 @@ class ConfigurableTask(Task):
                     )
 
     def download(self, dataset_kwargs=None) -> None:
+        if dataset_kwargs is not None and 'trust_remote_code' not in dataset_kwargs:
+            dataset_kwargs['trust_remote_code'] = True
+
         self.dataset = datasets.load_dataset(
             path=self.DATASET_PATH,
             name=self.DATASET_NAME,
             **dataset_kwargs if dataset_kwargs is not None else {},
-            trust_remote_code=True,
         )
 
     def has_training_docs(self) -> bool:
