@@ -20,7 +20,7 @@ please install sympy via pip install lm-eval[math] or pip install -e .[math]",
 # taken from
 # https://github.com/wellecks/lm-evaluation-harness/blob/master/lm_eval/tasks/minerva_math.py
 def doc_to_text(doc: dict) -> str:
-    return "Problem:" + "\n" + doc["problem"] + "\n\n" + "Solution:"
+    return "Question:" + "\n" + doc["problem"] + "\n\n" + "Answer:"
 
 
 def process_docs(dataset: datasets.Dataset) -> datasets.Dataset:
