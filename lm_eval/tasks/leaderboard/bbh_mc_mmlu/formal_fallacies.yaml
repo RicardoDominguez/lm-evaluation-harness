@@ -54,4 +54,4 @@ fewshot_config:
       - invalid'
     target: invalid
 include: _fewshot_template_yaml
-task: leaderboard_bbh_formal_fallacies
+task: leaderboard_bbh_mmlu_formal_fallacies

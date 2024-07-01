@@ -19,4 +19,4 @@ fewshot_config:
       Osvaldo tells the truth. Does Jamey tell the truth?'
     target: 'No'
 include: _fewshot_template_yaml
-task: leaderboard_bbh_web_of_lies
+task: leaderboard_bbh_mmlu_web_of_lies

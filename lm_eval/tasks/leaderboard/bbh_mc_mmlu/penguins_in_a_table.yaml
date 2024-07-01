@@ -65,4 +65,4 @@ fewshot_config:
       E. James'
     target: D.
 include: _fewshot_template_yaml
-task: leaderboard_bbh_penguins_in_a_table
+task: leaderboard_bbh_mmlu_penguins_in_a_table

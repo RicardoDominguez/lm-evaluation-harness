@@ -54,4 +54,4 @@ fewshot_config:
       F. 12/03/1960'
     target: B.
 include: _fewshot_template_yaml
-task: leaderboard_bbh_date_understanding
+task: leaderboard_bbh_mmlu_date_understanding

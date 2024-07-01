@@ -83,4 +83,4 @@ fewshot_config:
       J. triangle'
     target: D.
 include: _fewshot_template_yaml
-task: leaderboard_bbh_geometric_shapes
+task: leaderboard_bbh_mmlu_geometric_shapes

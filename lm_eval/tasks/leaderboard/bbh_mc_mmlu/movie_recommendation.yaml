@@ -51,4 +51,4 @@ fewshot_config:
       D. Edge of Tomorrow'
     target: D.
 include: _fewshot_template_yaml
-task: leaderboard_bbh_movie_recommendation
+task: leaderboard_bbh_mmlu_movie_recommendation

@@ -31,4 +31,4 @@ fewshot_config:
       B. wonderful square blue gold shoe'
     target: B.
 include: _fewshot_template_yaml
-task: leaderboard_bbh_hyperbaton
+task: leaderboard_bbh_mmlu_hyperbaton

@@ -37,4 +37,4 @@ fewshot_config:
       - No'
     target: 'Yes'
 include: _fewshot_template_yaml
-task: leaderboard_bbh_navigate
+task: leaderboard_bbh_mmlu_navigate

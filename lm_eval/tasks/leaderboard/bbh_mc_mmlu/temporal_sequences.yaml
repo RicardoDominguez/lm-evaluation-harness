@@ -98,4 +98,4 @@ fewshot_config:
       D. 3pm to 4pm'
     target: D.
 include: _fewshot_template_yaml
-task: leaderboard_bbh_temporal_sequences
+task: leaderboard_bbh_mmlu_temporal_sequences
