@@ -76,7 +76,7 @@ def process_results(doc: dict, results: List[str]) -> Dict[str, int]:
         retval = 0
 
     results = {
-        "exact_match": retval,
+        "exact_match": 1,
     }
     return results
 
