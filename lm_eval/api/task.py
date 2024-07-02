@@ -930,17 +930,13 @@ class ConfigurableTask(Task):
                         f'Both target_delimiter "{self.config.target_delimiter}" and target choice: "{choice}" do not have whitespace, ignore if the language you are evaluating on does not require/use whitespace'
                     )
 
-<<<<<<< HEAD
-    def download(self, dataset_kwargs=None) -> None:
+    def download(self, dataset_kwargs: Optional[Dict[str, Any]] = None) -> None:
         if dataset_kwargs is not None:
             if 'trust_remote_code' not in dataset_kwargs:
                 dataset_kwargs['trust_remote_code'] = True
         else:
             dataset_kwargs = {'trust_remote_code': True}
-
-=======
-    def download(self, dataset_kwargs: Optional[Dict[str, Any]] = None) -> None:
->>>>>>> hf/add_tasks
+            
         self.dataset = datasets.load_dataset(
             path=self.DATASET_PATH,
             name=self.DATASET_NAME,
