@@ -423,7 +423,7 @@ class Task(abc.ABC):
 
         # this should change based on the split
         doc_id_docs = list(
-            self.doc_iterator(rank=rank, limit=limit, world_size=world_size, split=split)
+            self.doc_iterator(rank=rank, limit=limit, world_size=world_size)
         )
 
         num_docs = len(doc_id_docs)
@@ -936,7 +936,7 @@ class ConfigurableTask(Task):
                 dataset_kwargs['trust_remote_code'] = True
         else:
             dataset_kwargs = {'trust_remote_code': True}
-            
+
         self.dataset = datasets.load_dataset(
             path=self.DATASET_PATH,
             name=self.DATASET_NAME,
