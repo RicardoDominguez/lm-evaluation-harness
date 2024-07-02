@@ -2,7 +2,7 @@ dataset_name: date_understanding
 description: 'Infer the date from context.
 
         '
-doc_to_choice: ["A.", "B.", "C.", "D.", "E.", "F."]
+doc_to_choice: ["A", "B", "C", "D", "E", "F"]
 fewshot_config:
   sampler: first_n
   samples:
@@ -21,7 +21,7 @@ fewshot_config:
       E. 07/14/1938
 
       F. 12/14/1988'
-    target: D.
+    target: D
   - input: 'Tomorrow is 11/12/2019. What is the date one year ago from today in MM/DD/YYYY?
 
       Options:
@@ -35,7 +35,7 @@ fewshot_config:
       D. 11/02/2018
 
       E. 11/04/2018'
-    target: B.
+    target: B
   - input: 'Jane and John married on Jan 2, 1958. It is their 5-year anniversary today.
       What is the date tomorrow in MM/DD/YYYY?
 
@@ -52,6 +52,6 @@ fewshot_config:
       E. 01/03/1982
 
       F. 12/03/1960'
-    target: B.
+    target: B
 include: _fewshot_template_yaml
 task: leaderboard_bbh_mmlu_date_understanding

@@ -2,7 +2,7 @@ dataset_name: reasoning_about_colored_objects
 description: 'Answer extremely simple questions about the colors of objects on a surface.
 
         '
-doc_to_choice: ["A.","B.","C.","D.","E.","F.","G.","H.","I.","J.","K.","L.","M.","N.","O.","P.","Q.","R."]
+doc_to_choice: ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R"]
 fewshot_config:
   sampler: first_n
   samples:
@@ -47,7 +47,7 @@ fewshot_config:
       Q. purple
 
       R. pink'
-    target: E.
+    target: E
   - input: 'On the table, you see a bunch of objects arranged in a row: a purple paperclip,
       a pink stress ball, a brown keychain, a green scrunchiephone charger, a mauve
       fidget spinner, and a burgundy pen. What is the color of the object directly
@@ -90,7 +90,7 @@ fewshot_config:
       Q. purple
 
       R. pink'
-    target: F.
+    target: F
   - input: 'On the nightstand, you see the following items arranged in a row: a teal
       plate, a burgundy keychain, a yellow scrunchiephone charger, an orange mug,
       a pink notebook, and a grey cup. How many non-orange items do you see to the
@@ -111,6 +111,6 @@ fewshot_config:
       F. five
 
       G. six'
-    target: A.
+    target: A
 include: _fewshot_template_yaml
 task: leaderboard_bbh_mmlu_reasoning_about_colored_objects

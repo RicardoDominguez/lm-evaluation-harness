@@ -3,7 +3,7 @@ description: 'Task description: Answer questions about which times certain event
   could have occurred.
 
         '
-doc_to_choice: ["A.","B.","C.","D."]
+doc_to_choice: ["A","B","C","D"]
 fewshot_config:
   sampler: first_n
   samples:
@@ -34,7 +34,7 @@ fewshot_config:
       C. 5pm to 6pm
 
       D. 2pm to 4pm'
-    target: A.
+    target: A
   - input: 'Today, Elizabeth went to the amusement park. Between what times could
       they have gone?
 
@@ -66,7 +66,7 @@ fewshot_config:
       C. 1pm to 2pm
 
       D. 3pm to 6pm'
-    target: A.
+    target: A
   - input: 'Today, Tiffany went to the beach. Between what times could they have gone?
 
       We know that:
@@ -96,6 +96,6 @@ fewshot_config:
       C. 5am to 6am
 
       D. 3pm to 4pm'
-    target: D.
+    target: D
 include: _fewshot_template_yaml
 task: leaderboard_bbh_mmlu_temporal_sequences

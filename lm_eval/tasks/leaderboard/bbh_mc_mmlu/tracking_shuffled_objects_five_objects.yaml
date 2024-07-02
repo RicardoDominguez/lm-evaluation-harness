@@ -3,7 +3,7 @@ description: 'A task requiring determining the final positions of a set of objec
   given their initial positions and a description of a sequence of swaps.
 
         '
-doc_to_choice: ["A.","B.","C.","D.","E."]
+doc_to_choice: ["A","B","C","D","E"]
 fewshot_config:
   sampler: first_n
   samples:
@@ -22,7 +22,7 @@ fewshot_config:
       B. blue ball
 
       C. pink ball'
-    target: A.
+    target: A
   - input: 'Alice, Bob, and Claire are playing a game. At the start of the game, they
       are each holding a ball: Alice has a white ball, Bob has a purple ball, and
       Claire has a pink ball.
@@ -38,7 +38,7 @@ fewshot_config:
       B. purple ball
 
       C. pink ball'
-    target: C.
+    target: C
   - input: 'Alice, Bob, and Claire are dancers at a square dance. At the start of
       a song, they each have a partner: Alice is dancing with Lola, Bob is dancing
       with Rodrigo, and Claire is dancing with Patrick.
@@ -54,6 +54,6 @@ fewshot_config:
       B. Rodrigo
 
       C. Patrick'
-    target: C.
+    target: C
 include: _fewshot_template_yaml
 task: leaderboard_bbh_mmlu_tracking_shuffled_objects_five_objects

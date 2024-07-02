@@ -3,7 +3,7 @@ description: 'Select the humorous edit that ''ruins'' the input movie or musical
   name.
 
         '
-doc_to_choice: ["A.","B.","C.","D.","E.","F."]
+doc_to_choice: ["A","B","C","D","E","F"]
 fewshot_config:
   sampler: first_n
   samples:
@@ -19,7 +19,7 @@ fewshot_config:
       C. whitesnuake
 
       D. mwhitesnake'
-    target: A.
+    target: A
   - input: 'Which of the following is a humorous edit of this artist or movie name:
       ''one of our dinosaurs is missing''?
 
@@ -32,7 +32,7 @@ fewshot_config:
       C. one of our dinosaurs is pissing
 
       D. one of our dinosaur is missing'
-    target: C.
+    target: C
   - input: 'Which of the following is a humorous edit of this artist or movie name:
       ''counting crows''?
 
@@ -45,6 +45,6 @@ fewshot_config:
       C. courting crows
 
       D. coutnting crows'
-    target: B.
+    target: B
 include: _fewshot_template_yaml
 task: leaderboard_bbh_mmlu_ruin_names

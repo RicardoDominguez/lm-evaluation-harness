@@ -2,7 +2,7 @@ dataset_name: hyperbaton
 description: 'Order adjectives correctly in English sentences.
 
         '
-doc_to_choice: ["A.", "B."]
+doc_to_choice: ["A", "B"]
 fewshot_config:
   sampler: first_n
   samples:
@@ -13,7 +13,7 @@ fewshot_config:
       A. rubber terrible ship
 
       B. terrible rubber ship'
-    target: B.
+    target: B
   - input: 'Which sentence has the correct adjective order:
 
       Options:
@@ -21,7 +21,7 @@ fewshot_config:
       A. repulsive small Brazilian exercise ship
 
       B. Brazilian repulsive exercise small ship'
-    target: A.
+    target: A
   - input: 'Which sentence has the correct adjective order:
 
       Options:
@@ -29,6 +29,6 @@ fewshot_config:
       A. blue gold wonderful square shoe
 
       B. wonderful square blue gold shoe'
-    target: B.
+    target: B
 include: _fewshot_template_yaml
 task: leaderboard_bbh_mmlu_hyperbaton

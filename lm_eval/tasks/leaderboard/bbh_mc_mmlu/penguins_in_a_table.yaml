@@ -2,7 +2,7 @@ dataset_name: penguins_in_a_table
 description: 'Answer questions about a table of penguins and their attributes.
 
         '
-doc_to_choice: ["A.","B.","C.","D.","E."]
+doc_to_choice: ["A","B","C","D","E"]
 fewshot_config:
   sampler: first_n
   samples:
@@ -27,7 +27,7 @@ fewshot_config:
       D. 4
 
       E. 5'
-    target: B.
+    target: B
   - input: 'Here is a table where the first line is a header and each subsequent line
       is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard,
       5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis
@@ -45,7 +45,7 @@ fewshot_config:
       D. Gwen
 
       E. James'
-    target: B.
+    target: B
   - input: 'Here is a table where the first line is a header and each subsequent line
       is a penguin:  name, age, height (cm), weight (kg) Louis, 7, 50, 11 Bernard,
       5, 80, 13 Vincent, 9, 60, 11 Gwen, 8, 70, 15  For example: the age of Louis
@@ -63,6 +63,6 @@ fewshot_config:
       D. Gwen
 
       E. James'
-    target: D.
+    target: D
 include: _fewshot_template_yaml
 task: leaderboard_bbh_mmlu_penguins_in_a_table

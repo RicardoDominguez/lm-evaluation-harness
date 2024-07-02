@@ -3,7 +3,7 @@ description: 'Detect the type of error in an English translation of a German sou
   sentence.
 
         '
-doc_to_choice: ["A.","B.","C.","D.","E.","F."]
+doc_to_choice: ["A","B","C","D","E","F"]
 fewshot_config:
   sampler: first_n
   samples:
@@ -37,7 +37,7 @@ fewshot_config:
       E. Dropped Content
 
       F. Facts'
-    target: D.
+    target: D
   - input: "The following translations from German to English contain a particular\
       \ error. That error will be one of the following types: Named Entities: An entity\
       \ (names, places, locations, etc.) is changed to a different entity. Numerical\
@@ -53,7 +53,7 @@ fewshot_config:
       \ am Lech.\nThe translation contains an error pertaining to\nOptions:\nA. Modifiers\
       \ or Adjectives\nB. Numerical Values\nC. Negation or Antonyms\nD. Named Entities\n\
       E. Dropped Content\nF. Facts"
-    target: E.
+    target: E
   - input: "The following translations from German to English contain a particular\
       \ error. That error will be one of the following types: Named Entities: An entity\
       \ (names, places, locations, etc.) is changed to a different entity. Numerical\
@@ -69,6 +69,6 @@ fewshot_config:
       \ Voivodeship of Poland.\nThe translation contains an error pertaining to\n\
       Options:\nA. Modifiers or Adjectives\nB. Numerical Values\nC. Negation or\
       \ Antonyms\nD. Named Entities\nE. Dropped Content\nF. Facts"
-    target: C.
+    target: C
 include: _fewshot_template_yaml
 task: leaderboard_bbh_mmlu_salient_translation_error_detection

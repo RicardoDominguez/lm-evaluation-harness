@@ -9,7 +9,7 @@ description: 'Determine which of two sentences is sarcastic.
 
 
   '
-doc_to_choice: ["A.","B."]
+doc_to_choice: ["A","B"]
 fewshot_config:
   sampler: first_n
   samples:
@@ -20,7 +20,7 @@ fewshot_config:
       A. Yes, because having interests and actively researching them is a huge waste
 
       B. Yes, because having interests and actively researching them is a huge deal'
-    target: A.
+    target: A
   - input: 'Which statement is sarcastic?
 
       Options:
@@ -30,7 +30,7 @@ fewshot_config:
 
       B. No one is going to disagree with you on this. Ad hominem attacks really
       help your case'
-    target: B.
+    target: B
   - input: 'Which statement is sarcastic?
 
       Options:
@@ -40,6 +40,6 @@ fewshot_config:
 
       B. Consistency in the league''s punishments? What do you think this is supposed
       to be, moral?'
-    target: A.
+    target: A
 include: _fewshot_template_yaml
 task: leaderboard_bbh_mmlu_snarks

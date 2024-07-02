@@ -2,7 +2,7 @@ dataset_name: movie_recommendation
 description: 'Recommend movies similar to the given list of movies.
 
         '
-doc_to_choice: ["A.","B.","C.","D.","E.","F."]
+doc_to_choice: ["A","B","C","D","E","F"]
 fewshot_config:
   sampler: first_n
   samples:
@@ -21,7 +21,7 @@ fewshot_config:
       D. The Barkley Marathons The Race That Eats Its Young
 
       E. Bug'
-    target: C.
+    target: C
   - input: 'Find a movie similar to Twister, The Silence of the Lambs, Independence
       Day, Braveheart:
 
@@ -36,7 +36,7 @@ fewshot_config:
       D. The Salton Sea
 
       E. Extreme Days'
-    target: C.
+    target: C
   - input: 'Find a movie similar to Minority Report, Total Recall, Inside Out, Forrest
       Gump:
 
@@ -49,6 +49,6 @@ fewshot_config:
       C. Catwoman
 
       D. Edge of Tomorrow'
-    target: D.
+    target: D
 include: _fewshot_template_yaml
 task: leaderboard_bbh_mmlu_movie_recommendation
