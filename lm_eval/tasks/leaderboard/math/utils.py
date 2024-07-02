@@ -69,7 +69,6 @@ def process_results(doc: dict, results: List[str]) -> Dict[str, int]:
 
     unnormalized_answer = get_unnormalized_answer(candidates)
     answer = normalize_final_answer(unnormalized_answer)
-    answer = answer.strip()
 
     if is_equiv(answer, doc["answer"]):
         retval = 1
@@ -292,4 +291,4 @@ def normalize_final_answer(final_answer: str) -> str:
     if final_answer.replace(",", "").isdigit():
         final_answer = final_answer.replace(",", "")
 
-    return final_answer
+    return final_answer.strip()
