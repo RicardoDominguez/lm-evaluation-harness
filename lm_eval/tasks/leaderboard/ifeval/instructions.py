@@ -13,6 +13,10 @@
 # limitations under the License.
 
 """Library of instructions."""
+<<<<<<< HEAD
+=======
+
+>>>>>>> hf/add_tasks
 import collections
 import json
 import logging
