@@ -76,7 +76,7 @@ def process_results(doc: dict, results: List[str]) -> Dict[str, int]:
         retval = 0
 
     results = {
-        "exact_match": 1,
+        "exact_match": retval,
     }
     return results
 
@@ -145,6 +145,7 @@ def is_equiv(x1: str, x2: str) -> bool:
     """
     x1 and x2 are normalized latex string
     """
+    print(x1, x2)
     try:
         with timeout(seconds=5):
             try:
