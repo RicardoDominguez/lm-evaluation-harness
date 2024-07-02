@@ -66,10 +66,11 @@ def list_fewshot_samples() -> list[dict]:
 
 def process_results(doc: dict, results: List[str]) -> Dict[str, int]:
     candidates = results[0]
-
+    print('candidates', candidates)
     unnormalized_answer = get_unnormalized_answer(candidates)
     answer = normalize_final_answer(unnormalized_answer).strip()
-    print(unnormalized_answer, answer)
+    print('unnormalized_answer', unnormalized_answer)
+    print('answer', answer)
 
     if is_equiv(answer, doc["answer"]):
         retval = 1
@@ -186,7 +187,6 @@ def is_equiv(x1: str, x2: str) -> bool:
 
 
 def get_unnormalized_answer(text: str) -> str:
-    print('to unormalize', text)
     INVALID_ANSWER = "[invalidanswer]"
     end_seq = "I hope it is correct."
     text += end_seq
