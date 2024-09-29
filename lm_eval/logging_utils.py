@@ -404,7 +404,10 @@ def get_commit_from_path(repo_path: Path) -> Optional[str]:
             .split(" ")[-1]
         )
         head_ref = Path(git_folder, head_name)
-        git_hash = head_ref.read_text(encoding="utf-8").replace("\n", "")
+        if head_ref.exists():
+            git_hash = head_ref.read_text(encoding="utf-8").replace("\n", "")
+        else:
+            git_hash = None
     else:
         git_hash = None
     return git_hash
